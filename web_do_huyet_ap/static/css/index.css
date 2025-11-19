@@ -1,0 +1,17 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.logo {
+  width: 200px;           /* Logo cố định 200px, vừa mắt */
+  max-width: 60vw;        /* Không vượt quá 60% chiều rộng màn hình */
+  height: auto;           /* Giữ đúng tỷ lệ ảnh */
+  display: block;
+}
+

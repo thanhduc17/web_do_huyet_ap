@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome Back 👋</h1>
+    <p>Please enter your email & password to login to your account</p>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Enter your password">
+          <span id="togglePassword">👁️‍🗨️</span>
+        </div>
+      </div>
+
+      <div class="form-group remember">
+        <label>
+          <input type="checkbox" id="rememberMe">
+          Remember me
+        </label>
+        <a href="forgot_password.html" class="forgot">Forgot Password?</a>
+      </div>
+
+      <button type="submit" id="loginBtn">Login</button>
+    </form>
+
+    <div class="signup-link">
+      Not have an Account? <a href="/signup">Sign up</a>
+    </div>
+  </div>
+
+  <div id="dialog" class="dialog hidden">
+    <div class="dialog-content">
+      <h2>Login Successful!</h2>
+      <p>Please wait... You will be directed to the homepage.</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/static/css/welcome.css" />
+    <!-- FontAwesome để có icon -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <img src="/static/img/logo.png" alt="Logo" class="logo" />
+
+      <!-- Text -->
+      <h2>Welcome to</h2>
+      <h1 class="brand">Gcares 👋</h1>
+
+      <!-- Login button -->
+      <button class="btn login" onclick="goLogin()">Login</button>
+
+      <!-- Sign up button -->
+      <button class="btn signup" onclick="goSignup()">Sign up</button>
+
+      <!-- Or with -->
+      <p class="or">Or with</p>
+
+      <!-- Social buttons -->
+      <div class="social-buttons">
+  <a href="https://accounts.google.com" class="social google">
+    <img src="/static/img/logo3.png" alt="Google">
+  </a>
+  <a href="https://appleid.apple.com" class="social apple">
+    <img src="/static/img/logo4.png" alt="Apple">
+  </a>
+  <a href="https://facebook.com" class="social facebook">
+    <img src="/static/img/logo2.png" alt="Facebook">
+  </a>
+</div>
+
+
+      <!-- Agreement -->
+      <p class="terms">By continuing, you agree to our</p>
+      <p class="terms-bold">User Agreement and Privacy Policy</p>
+    </div>
+
+    <script src="/static/js/welcome.js"></script>
+  </body>
+</html>

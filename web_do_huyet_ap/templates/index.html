@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Screen</title>
+  <!-- Gọi file CSS đúng cách -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <!-- Logo -->
+  <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+
+  <!-- Gọi file JS -->
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
