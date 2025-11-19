@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thông tin trước khi đo huyết áp</title>
+  <link rel="stylesheet" href="/static/css/information.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Biểu mẫu trước khi đo huyết áp</h1>
+      <p class="lead">Phiên bản rút gọn — bao gồm chiều cao, cân nặng và chỉ số BMI.</p>
+
+      <form id="bpForm" novalidate>
+        <div>
+          <label for="fullName">Họ và tên *</label>
+          <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="Nguyễn Văn A">
+        </div>
+
+        <div>
+          <label for="dob">Ngày sinh</label>
+          <input id="dob" name="dob" type="date">
+        </div>
+
+        <div>
+          <label for="age">Tuổi *</label>
+          <input id="age" name="age" type="number" min="0" max="150" required placeholder="25">
+        </div>
+
+        <div>
+          <label for="gender">Giới tính</label>
+          <select id="gender" name="gender">
+            <option value="">-- Chọn --</option>
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+            <option value="other">Khác/Không muốn nói</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="restMin">Thời gian nghỉ trước đo (phút) *</label>
+          <input id="restMin" name="restMin" type="number" min="0" max="30" value="5" required>
+          <div class="hint">Khuyến nghị: nghỉ 3–5 phút trước khi đo.</div>
+        </div>
+
+        <div>
+          <label for="weight">Cân nặng (kg) *</label>
+          <input id="weight" name="weight" type="number" step="0.1" min="1" max="500" required placeholder="70">
+        </div>
+
+        <div>
+          <label for="height">Chiều cao (cm) *</label>
+          <input id="height" name="height" type="number" step="0.1" min="30" max="300" required placeholder="170">
+        </div>
+
+        <div class="full">
+          <label for="bmi">Chỉ số BMI</label>
+          <input id="bmi" name="bmi" type="text" readonly placeholder="Tự động tính từ cân nặng và chiều cao">
+          <div class="hint">BMI = cân nặng (kg) / (chiều cao (m))². Dùng để tham khảo.</div>
+        </div>
+
+        <div class="full">
+          <label class="checkbox">
+            <input id="consent" name="consent" type="checkbox" required>
+            Tôi đồng ý và xác nhận thông tin trên là đúng. *
+          </label>
+        </div>
+
+        <div class="full">
+          <div id="formError" class="error" aria-live="polite"></div>
+        </div>
+
+        <div class="full actions">
+          <button type="button" class="secondary" id="previewBtn">Xem trước</button>
+          <button type="button" id="downloadBtn">Tải JSON</button>
+          <button type="submit">Bắt đầu đo</button>
+        </div>
+      </form>
+
+      <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <h3 style="margin:0 0 8px">Tóm tắt nhanh</h3>
+          <div id="summaryBox" class="summary">Chưa có thông tin.</div>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px">Hướng dẫn ngắn</h3>
+          <div class="summary">
+            - Ngồi yên, tựa lưng, chân đặt xuống sàn. <br>
+            - Không nói chuyện trong khi đo. <br>
+            - Nghỉ ít nhất 3-5 phút nếu mới vận động. <br>
+            - Ghi lại tay đã đo và thời gian.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/information.js"></script>
+</body>
+</html>
